@@ -1,0 +1,80 @@
+{
+  "id": "f5bfbc02-05e7-43ca-a323-b18524a1e439",
+  "version": "2.0",
+  "name": "bai2_Verify",
+  "url": "http://automationpractice.com",
+  "tests": [{
+    "id": "d4d41613-47c1-488c-9301-3e6988cef7c2",
+    "name": "Ve",
+    "commands": [{
+      "id": "ef03a5ad-6948-4943-8642-7a889d929ee5",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98af77f7-5004-46b1-ad15-531dd3e7073c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "952x706",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "932575a0-a953-492e-ae05-b587835ebdbd",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "befb24ca-e439-4b94-bfe9-d28f1d967f65",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.login", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div[2]/div/div/nav/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://automationpractice.com/index.php?controller=my-account']", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb552961-5e3e-4dbe-9ccf-b4fdd3aa4768",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SubmitLogin > span",
+      "targets": [
+        ["css=#SubmitLogin > span", "css:finder"],
+        ["xpath=//button[@id='SubmitLogin']/span", "xpath:idRelative"],
+        ["xpath=//p[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86fde454-148d-4840-83f6-ed284dba097e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.alert > p",
+      "targets": [
+        ["css=.alert > p", "css:finder"],
+        ["xpath=//div[@id='center_column']/div/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'There is 1 error')]", "xpath:innerText"]
+      ],
+      "value": "There is 1 error"
+    }]
+  }],
+  "suites": [{
+    "id": "23f8dff5-4be3-4ff0-941d-6c4f5c37abe8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d4d41613-47c1-488c-9301-3e6988cef7c2"]
+  }],
+  "urls": ["http://automationpractice.com/"],
+  "plugins": []
+}
